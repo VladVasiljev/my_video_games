@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Game_Title: MyString
+  Release_Date: 2019-02-21
+  Description: MyText
+  Publisher: MyString
+
+two:
+  Game_Title: MyString
+  Release_Date: 2019-02-21
+  Description: MyText
+  Publisher: MyString
