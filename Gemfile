@@ -32,8 +32,12 @@ gem 'jbuilder', '~> 2.5'
 # marking scheme so that's covered with this gem
 gem 'devise'
 
+#Gem that will allow use to uploaded an image
+# https://github.com/thoughtbot/paperclip
+gem 'paperclip', '~> 4.2.0'
+
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

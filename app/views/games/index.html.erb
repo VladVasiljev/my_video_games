@@ -16,6 +16,7 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
+        <td><%= image_tag game.image.url(:medium) %></td>
         <td><%= game.Game_Title %></td>
         <td><%= game.Release_Date %></td>
         <td><%= game.Description %></td>
