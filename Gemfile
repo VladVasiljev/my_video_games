@@ -39,6 +39,9 @@ gem 'paperclip', '~> 4.2.0'
 #Gem that will be used to do styling and structuring
 gem 'bootstrap-sass', '~> 3.4.1'
 
+#Need for bootstrap
+gem 'jquery-rails'
+
 # Use ActiveStorage variant
 #gem 'mini_magick', '~> 4.8'
 

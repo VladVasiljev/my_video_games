@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+//Background Colour
+body {
+  background: #27282e;
+}
+
+//NavBar Colour
+.navbar-default{
+  background: rgba(0,0,0,.6);
+  border-color: rgba(0,0,0,.6);
+}
+
+.col-md-3 {
+padding-bottom: 50px;
+}
+
+.review_title {
+  margin: 0 0 20px 0;
+}
+.reviews {
+  padding: 15px 0;
+  border-bottom: 1px solid #EAEAEA;
+  .star-rating {
+    padding-bottom: 8px;
+  }
+}
+

@@ -1,24 +1,33 @@
-<%= image_tag @game.image.url(:medium) %>
 
-<p>
-  <strong>Game title:</strong>
-  <%= @game.Game_Title %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div align="col-md-4">
+        <%= image_tag @game.image.url(:medium) %>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+            <tr>
+              <td><strong>Game Title:</strong></td>
+              <td><%= @game.Game_Title %></td>
+            </tr>
+            <tr>
+              <td><strong>Release date:</strong></td>
+              <td><%= @game.Release_Date %></td>
+            </tr>
+            <tr>
+              <td><strong>Description:</strong></td>
+              <td><%= @game.Description %></td>
+            </tr>
+            <tr>
+              <td><strong>Publisher:</strong></td>
+              <td><%= @game.Publisher %></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Release date:</strong>
-  <%= @game.Release_Date %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @game.Description %>
-</p>
-
-<p>
-  <strong>Publisher:</strong>
-  <%= @game.Publisher %>
-</p>
-
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
