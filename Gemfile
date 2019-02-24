@@ -36,8 +36,11 @@ gem 'devise'
 # https://github.com/thoughtbot/paperclip
 gem 'paperclip', '~> 4.2.0'
 
+#Gem that will be used to do styling and structuring
+gem 'bootstrap-sass', '~> 3.4.1'
+
 # Use ActiveStorage variant
-gem 'mini_magick', '~> 4.8'
+#gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
