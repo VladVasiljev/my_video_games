@@ -1,9 +1,11 @@
 
 <div class="panel panel-default">
   <div class="panel-body">
-    <div class="row">
+    <div class="padding">
       <div align="col-md-4">
         <%= image_tag @game.image.url(:medium) %>
+        <div class="star-rating" data-score= <%= @avg_review %> ></div>
+        <em><%= "#{@reviews.length} reviews" %></em>
         <div class="table-responsive">
           <table class="table">
             <tbody>
@@ -25,9 +27,40 @@
             </tr>
             </tbody>
           </table>
+          <%= link_to "Write a Review", new_game_review_path(@game) %>
         </div>
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <h1 class="review_title"><%= @game.Game_Title %></h1>
+        <p><%= @game.Description %></p>
+
+        <% if @reviews.blank? %>
+          <h3>No reviews just yet, would you like to add the first!</h3>
+          <%= link_to "Write Review", new_game_review_path(@game), class: "btn btn-danger" %>
+        <% else %>
+          <% @reviews.each do |review| %>
+            <div class="reviews">
+              <div class="star-rating" data-score= <%= review.rating %> ></div>
+              <p><%= review.comment %></p>
+              <p><%= review.hours_played %></p>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
 
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', game_path %>
+
+<!--Calling the script for the rating system-->
+<script>
+    $('.star-rating').raty({
+        path: '/assets/',
+        readOnly: true,
+        score: function() {
+            return $(this).attr('data-score');
+        }
+    });
+</script>
