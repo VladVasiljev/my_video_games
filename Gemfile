@@ -42,6 +42,10 @@ gem 'bootstrap-sass', '~> 3.4.1'
 #Need for bootstrap and other things
 gem 'jquery-rails'
 
+#Searchkick
+# https://github.com/ankane/searchkick
+gem 'searchkick'
+
 # Use ActiveStorage variant
 #gem 'mini_magick', '~> 4.8'
 

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag @game.image.url(:medium) %>
-        <div class="star-rating" data-score= <%= @avg_review %> ></div>
+        <div class="star-rating" data-score=<%= @avg_review %>></div>
         <em><%= "#{@reviews.length} reviews" %></em>
         <div class="table-responsive">
           <table class="table">
@@ -31,34 +31,35 @@
       </div>
       <div class="col-md-7 col-md-offset-1">
         <h1 class="review_title"><%= @game.Game_Title %></h1>
-        <p><%= @game.Description %></p>
-
         <% if @reviews.blank? %>
-          <h3>No reviews just yet, would you like to add the first!</h3>
+          <h3>No reviews, be the first one to review <%= @game.Game_Title %>!</h3>
           <%= link_to "Write Review", new_game_review_path(@game), class: "btn btn-danger" %>
         <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">
-              <div class="star-rating" data-score= <%= review.rating %> ></div>
+              <div class="star-rating" data-score=<%= review.rating %>></div>
               <p><%= review.comment %></p>
-              <p><%= review.hours_played %></p>
+              <p>Hours Played <%= review.hours_played %> Hours</p>
+              <%= link_to 'Edit', edit_game_review_path(@game.id,review) %> |
+              <%= link_to 'Delete Review', game_review_path(@game.id, review), method: :delete, data: {confirm: 'Are you sure?'} %>
             </div>
           <% end %>
         <% end %>
       </div>
     </div>
   </div>
+  <%= link_to 'Edit', edit_game_path(@game) %> |
+  <%= link_to 'Back', game_path %>
 </div>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', game_path %>
 
-<!--Calling the script for the rating system-->
+
+<!--Calling the script for the star rating system-->
 <script>
     $('.star-rating').raty({
         path: '/assets/',
         readOnly: true,
-        score: function() {
+        score: function () {
             return $(this).attr('data-score');
         }
     });

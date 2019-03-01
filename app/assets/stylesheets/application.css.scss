@@ -22,22 +22,67 @@ body {
 }
 
 //NavBar Colour
-.navbar-default{
-  background: rgba(0,0,0,.6);
-  border-color: rgba(0,0,0,.6);
+.navbar-default {
+  background: rgba(0, 0, 0, .6);
+  border-color: rgba(0, 0, 0, .6);
 }
 
 .col-md-3 {
-padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .review_title {
   margin: 0 0 20px 0;
 }
+
 .reviews {
   padding: 15px 0;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 2px dotted #EAEAEA;
+
   .star-rating {
     padding-bottom: 8px;
   }
 }
+
+//Changing the colour of the background and removeing border
+.img-thumbnail {
+  background-color: #9100ff;
+  border: 0px dotted black;
+}
+
+//Changing the colour of the nav bar branding
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+//Changing the colour of remaning tezt on the navbar
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+//When navbar is in focus we change the text colour to red
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #da1106;
+  background-color: transparent;
+}
+
+//Things that the user has visted will be coloured black
+a:visited {
+  color: #000;
+}
+
+//When user hovers over a <tag> we set the background to transparent
+a:hover {
+  color: #000;
+  background-color: transparent;
+}
+
+//Normal <a> tags
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+//a:visited {
+//  color: white;
+//}

@@ -2,20 +2,30 @@ class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
+
   # GET /games
   # GET /games.json
   def index
     @games = Game.all
   end
 
+
+  def search
+    if params[:search].present?
+      @games = Game.search(params[:search])
+    else
+      @games = Game.all
+    end
+  end
+
   # GET /games/1
   # GET /games/1.json
   def show
-    @reviews = Review.where(game_id: @game.id).order("created_at DESC")
-    if @reviews.blank?
+    @reviews = @game.reviews.order("created_at DESC")
+    unless @reviews.present?
       @avg_review = 0
     else
-      @avg_review = @reviews.average(:rating).round(2)
+      @avg_review = @reviews.average(:rating).present? ? @reviews.average(:rating).round(2) : 0
     end
   end
 
