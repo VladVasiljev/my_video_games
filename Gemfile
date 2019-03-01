@@ -49,6 +49,8 @@ gem 'searchkick'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+#
+gem 'pg'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -77,6 +79,9 @@ group :test do
   gem 'chromedriver-helper'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
+end
+
+group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
