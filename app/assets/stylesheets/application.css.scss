@@ -19,6 +19,7 @@
 //Background Colour
 body {
   background: #27282e;
+  color: black;
 }
 
 //NavBar Colour
@@ -83,6 +84,10 @@ a {
   text-decoration: none;
 }
 
-//a:visited {
-//  color: white;
-//}
+.container .jumbotron, .container-fluid .jumbotron {
+  color: black;
+}
+
+input, button, select, textarea {
+  color: black;
+}
