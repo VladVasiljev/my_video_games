@@ -49,8 +49,7 @@ gem 'searchkick'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-#
-gem 'pg'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -82,6 +81,7 @@ group :test do
 end
 
 group :production do
+  gem 'searchkick'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
