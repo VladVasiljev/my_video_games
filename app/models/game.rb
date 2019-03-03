@@ -1,8 +1,5 @@
-class Game  < ActiveRecord::Base
+class Game  < ApplicationRecord
   searchkick
-  Elasticsearch::Model.client = Elasticsearch::Client.new url: ENV['https://f73agaf2fx:os9mr8w6yl@maple-689483418.eu-west-1.bonsaisearch.net/games'], log: true
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
   belongs_to :user
   has_many :reviews
 
