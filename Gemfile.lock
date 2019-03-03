@@ -51,6 +51,9 @@ GEM
       execjs
     bcrypt (3.1.12-x64-mingw32)
     bindex (0.5.0)
+    bonsai-elasticsearch-rails (7.0.1)
+      elasticsearch-model (< 8)
+      elasticsearch-rails (< 8)
     bootsnap (1.4.1)
       msgpack (~> 1.0)
     bootstrap-sass (3.4.1)
@@ -94,6 +97,11 @@ GEM
       elasticsearch-transport (= 6.1.0)
     elasticsearch-api (6.1.0)
       multi_json
+    elasticsearch-model (6.0.0)
+      activesupport (> 3)
+      elasticsearch (> 1)
+      hashie
+    elasticsearch-rails (6.0.0)
     elasticsearch-transport (6.1.0)
       faraday
       multi_json
@@ -249,6 +257,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bonsai-elasticsearch-rails
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.4.1)
   byebug

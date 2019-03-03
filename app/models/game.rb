@@ -1,4 +1,6 @@
 class Game  < ActiveRecord::Base
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
   searchkick
   belongs_to :user
   has_many :reviews
