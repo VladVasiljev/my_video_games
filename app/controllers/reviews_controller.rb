@@ -44,7 +44,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html {redirect_to game_url, notice: 'Your review has been deleted.'}
+      format.html {redirect_to @game, notice: 'Your review has been deleted.'}
       format.json {head :no_content}
     end
   end

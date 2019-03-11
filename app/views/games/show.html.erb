@@ -40,16 +40,23 @@
               <div class="star-rating" data-score=<%= review.rating %>></div>
               <p><%= review.comment %></p>
               <p>Hours Played <%= review.hours_played %> Hours</p>
-              <%= link_to 'Edit', edit_game_review_path(@game.id,review) %> |
-              <%= link_to 'Delete Review', game_review_path(@game.id, review), method: :delete, data: {confirm: 'Are you sure?'} %>
-            </div>
+<!--              This if statement checks if the review left matches to the user if so show these functions,-->
+<!--              admin has access to edit and delete the reviews-->
+              <% if current_user && current_user == review.user && current_user.admin%>
+                <%= link_to 'Edit', edit_game_review_path(@game.id, review) %> |
+                <%= link_to 'Delete Review', game_review_path(@game.id, review), method: :delete, data: {confirm: 'Are you sure?'} %>
+                </div>
+              <% end %>
           <% end %>
         <% end %>
       </div>
     </div>
   </div>
-  <%= link_to 'Edit', edit_game_path(@game) %> |
-  <%= link_to 'Back', game_path %>
+  <!--  Checking if the user is admin or not if not then they don't see edit or back -->
+  <% if current_user && current_user.admin %>
+    <%= link_to 'Edit', edit_game_path(@game) %> |
+    <%= link_to 'Back', game_path %>
+  <% end %>
 </div>
 
 
