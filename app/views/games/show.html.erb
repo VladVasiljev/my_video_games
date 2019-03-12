@@ -2,61 +2,67 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
+      <div class="imageCenter">
+        <div class="img-thumbnail">
         <%= image_tag @game.image.url(:medium) %>
-        <div class="star-rating" data-score=<%= @avg_review %>></div>
-        <em><%= "#{@reviews.length} reviews" %></em>
-        <div class="table-responsive">
-          <table class="table">
-            <tbody>
-            <tr>
-              <td><strong>Game Title:</strong></td>
-              <td><%= @game.Game_Title %></td>
-            </tr>
-            <tr>
-              <td><strong>Release date:</strong></td>
-              <td><%= @game.Release_Date %></td>
-            </tr>
-            <tr>
-              <td><strong>Description:</strong></td>
-              <td><%= @game.Description %></td>
-            </tr>
-            <tr>
-              <td><strong>Publisher:</strong></td>
-              <td><%= @game.Publisher %></td>
-            </tr>
-            </tbody>
-          </table>
-          <%= link_to "Write a Review", new_game_review_path(@game) %>
         </div>
       </div>
-      <div class="col-md-7 col-md-offset-1">
-        <h1 class="review_title"><%= @game.Game_Title %></h1>
-        <% if @reviews.blank? %>
-          <h3>No reviews, be the first one to review <%= @game.Game_Title %>!</h3>
-          <%= link_to "Write Review", new_game_review_path(@game), class: "btn btn-danger" %>
-        <% else %>
-          <% @reviews.each do |review| %>
-            <div class="reviews">
-              <div class="star-rating" data-score=<%= review.rating %>></div>
-              <p><%= review.comment %></p>
-              <p>Hours Played <%= review.hours_played %> Hours</p>
-<!--              This if statement checks if the review left matches to the user if so show these functions,-->
-<!--              admin has access to edit and delete the reviews-->
-              <% if current_user && current_user == review.user && current_user.admin%>
-                <%= link_to 'Edit', edit_game_review_path(@game.id, review) %> |
-                <%= link_to 'Delete Review', game_review_path(@game.id, review), method: :delete, data: {confirm: 'Are you sure?'} %>
-                </div>
-              <% end %>
-          <% end %>
-        <% end %>
+      <div class="star-rating" data-score=<%= @avg_review %>></div>
+      <em><%= "#{@reviews.length} reviews" %></em>
+      <em class="reviewLink"><%= link_to "Write a Review", new_game_review_path(@game) %></em>
+      <div class="table-responsive">
+        <table class="table">
+          <tbody>
+          <tr>
+            <td><strong>Game Title:</strong></td>
+            <td><%= @game.Game_Title %></td>
+          </tr>
+          <tr>
+            <td><strong>Release date:</strong></td>
+            <td><%= @game.Release_Date %></td>
+          </tr>
+          <tr>
+            <td><strong>Description:</strong></td>
+            <td><%= @game.Description %></td>
+          </tr>
+          <tr>
+            <td><strong>Publisher:</strong></td>
+            <td><%= @game.Publisher %></td>
+          </tr>
+          </tbody>
+        </table>
+        <%= link_to "Write a Review", new_game_review_path(@game) %>
+
       </div>
     </div>
+    <div class="col-md-7 col-md-offset-1">
+      <h1 class="review_title"><%= @game.Game_Title %></h1>
+      <% if @reviews.blank? %>
+        <h3>No reviews, be the first one to review <%= @game.Game_Title %>!</h3>
+        <%= link_to "Write Review", new_game_review_path(@game), class: "btn btn-danger" %>
+      <% else %>
+        <% @reviews.each do |review| %>
+          <div class="reviews">
+            <div class="star-rating" data-score=<%= review.rating %>></div>
+            <p><%= review.comment %></p>
+            <p>Hours Played <%= review.hours_played %> Hours</p>
+            <!--              This if statement checks if the review left matches to the user if so show these functions,-->
+            <!--              admin has access to edit and delete the reviews-->
+            <% if current_user && current_user == review.user && current_user.admin %>
+              <%= link_to 'Edit', edit_game_review_path(@game.id, review) %> |
+              <%= link_to 'Delete Review', game_review_path(@game.id, review), method: :delete, data: {confirm: 'Are you sure?'} %>
+              </div>
+            <% end %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
-  <!--  Checking if the user is admin or not if not then they don't see edit or back -->
-  <% if current_user && current_user.admin %>
-    <%= link_to 'Edit', edit_game_path(@game) %> |
-    <%= link_to 'Back', game_path %>
-  <% end %>
+</div>
+<!--  Checking if the user is admin or not if not then they don't see edit or back -->
+<% if current_user && current_user.admin %>
+  <%= link_to 'Edit', edit_game_path(@game) %> |
+  <%= link_to 'Back', game_path %>
+<% end %>
 </div>
 
 

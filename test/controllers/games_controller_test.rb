@@ -45,4 +45,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to games_url
   end
+
+  test
+
 end

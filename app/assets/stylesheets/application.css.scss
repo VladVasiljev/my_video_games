@@ -22,6 +22,14 @@ body {
   color: black;
 }
 
+//Changing the size of the container
+.container {
+  width: auto;
+  height: auto;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
 //NavBar Colour
 .navbar-default {
   background: rgba(0, 0, 0, .6);
@@ -49,7 +57,9 @@ body {
 .img-thumbnail {
   background-color: #9100ff;
   border: 0px dotted black;
+
 }
+
 
 //Changing the colour of the nav bar branding
 .navbar-default .navbar-brand {
@@ -90,4 +100,23 @@ a {
 
 input, button, select, textarea {
   color: black;
+}
+
+//Giving padding to star rating stars
+.star-rating {
+  padding-top: 10px;
+}
+
+
+//Centering image on game pages
+.imageCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 274px;
+
+}
+
+.reviewLink{
+  margin-left: 320px;
 }
