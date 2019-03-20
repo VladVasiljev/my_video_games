@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :gameurls
+  get '/searchurl', :controller=>'gameurls', :action=>'checkgameurl'
+  post '/validate', :controller=>'gameurls', :action=>'validateurl'
+
   devise_for :users
 
   resources :games do

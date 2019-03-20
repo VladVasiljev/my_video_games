@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gameurls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gameurls.each do |gameurl| %>
+      <tr>
+        <td><%= gameurl.url %></td>
+        <td><%= link_to 'Show', gameurl %></td>
+        <td><%= link_to 'Edit', edit_gameurl_path(gameurl) %></td>
+        <td><%= link_to 'Destroy', gameurl, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gameurl', new_gameurl_path %>

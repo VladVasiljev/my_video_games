@@ -8,7 +8,6 @@ class GamesController < ApplicationController
     @games = Game.all
   end
 
-
   def search
     if params[:search].present?
       @games = Game.search(params[:search])
