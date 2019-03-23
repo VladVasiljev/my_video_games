@@ -51,7 +51,7 @@ gem 'bonsai-elasticsearch-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'getGame', '>= 0.0.2'
+gem 'getGame', '>= 0.0.2' , 'path: getGame-0.0.2.gem'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
