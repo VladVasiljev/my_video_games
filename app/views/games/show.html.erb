@@ -61,6 +61,7 @@
   <!--  Checking if the user is admin or not if not then they don't see edit or back -->
   <% if current_user && current_user.admin %>
     <%= link_to 'Edit', edit_game_path(@game) %> |
+    <%= link_to 'Delete Game', game_path(@game.id), method: :delete, data: {confirm: 'Are you sure?'} %> |
     <%= link_to 'Back', game_path %>
   <% end %>
 </div>

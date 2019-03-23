@@ -1,10 +1,10 @@
-Prime Number Result<br>
-<%= @input1 %> is <%= @result %>
-<hr>
-<h1>Enter a number to check if it is Prime</h1>
+<h1>Enter Game Name</h1>
+<h2>URL will be generated, after searching, click on the games name to access the link</h2>
 <%= form_tag "/validate" do %>
   <%= text_field_tag :search_string %>
   <%= submit_tag "Search" %>
 <% end %>
+<h2>Here's your link for <%=link_to @input1, @result ,target: :_blank%></h2>
+<hr>
 
 
