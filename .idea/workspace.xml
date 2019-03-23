@@ -110,8 +110,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="55" column="64" lean-forward="true" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+            <state relative-caret-position="284">
+              <caret line="53" column="125" lean-forward="true" selection-start-line="53" selection-start-column="125" selection-end-line="53" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -193,9 +193,8 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="471" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
@@ -456,7 +455,7 @@
       <workItem from="1552352296357" duration="7638000" />
       <workItem from="1552402824715" duration="6443000" />
       <workItem from="1553010323121" duration="7285000" />
-      <workItem from="1553253696376" duration="4250000" />
+      <workItem from="1553253696376" duration="4617000" />
     </task>
     <servers />
   </component>
@@ -466,7 +465,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109700000" />
+    <option name="totallyTimeSpent" value="110067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,10 +477,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13166311" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2702407" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -795,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="55" column="64" lean-forward="true" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+        <state relative-caret-position="284">
+          <caret line="53" column="125" lean-forward="true" selection-start-line="53" selection-start-column="125" selection-end-line="53" selection-end-column="125" />
         </state>
       </provider>
     </entry>
