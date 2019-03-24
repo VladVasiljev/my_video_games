@@ -88,3 +88,24 @@ class GamesController < ApplicationController
     params.require(:game).permit(:Game_Title, :Release_Date, :Description, :Publisher, :image)
   end
 end
+
+
+# Singleton class
+require 'singleton'
+class UserData
+  include Singleton
+  # A setter that will store the version number
+  def SetVersionNumber(version)
+    @data = version
+  end
+
+  # A getter that will allow use to display the data
+  def GetData
+    return @data
+  end
+
+end
+
+UserData.instance().SetVersionNumber("1.0.0")
+
+
