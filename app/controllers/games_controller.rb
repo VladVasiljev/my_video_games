@@ -106,6 +106,7 @@ class UserData
 
 end
 
+# Setting version number
 UserData.instance().SetVersionNumber("1.0.0")
 
 

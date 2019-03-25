@@ -20,6 +20,11 @@
 body {
   background: #27282e;
   color: black;
+
+}
+
+.panel-body{
+  padding-bottom: 90px;
 }
 
 //Changing the size of the container
@@ -119,4 +124,18 @@ input, button, select, textarea {
 
 .reviewLink{
   margin-left: 320px;
+}
+
+//Nav bar css styling
+.navbar-fixed-bottom {
+  padding: 2.5rem 0;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-top: .05rem solid #9100ff;
+}
+
+.panel-default {
+  /* border-color: #bc00f9; */
+  border-radius: 10px;
 }
