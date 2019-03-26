@@ -44,14 +44,16 @@ gem 'jquery-rails'
 # https://github.com/ankane/searchkick
 gem 'searchkick'
 
-# Use ActiveStorage variant
-#gem 'mini_magick', '~> 4.8'
+# Simple form gem
+gem 'simple_form'
+
 
 gem 'bonsai-elasticsearch-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'getGame', '>= 0.0.2' , git: "https://b9585f838d658d3595bdf2397f3de3ecbcd46dc4:x-oauth-basic@github.com/VladVasiljev/getGameOnIG.git"
+# Custom gem made by me (Vladislavs Vasiljevs) getting the gem from my GitHub account
+gem 'getGame', '>= 0.0.2', git: "https://b9585f838d658d3595bdf2397f3de3ecbcd46dc4:x-oauth-basic@github.com/VladVasiljev/getGameOnIG.git"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
