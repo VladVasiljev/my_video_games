@@ -92,7 +92,7 @@ end
 
 # Singleton class
 require 'singleton'
-class UserData
+class AppVersion
   include Singleton
   # A setter that will store the version number
   def SetVersionNumber(version)
@@ -107,6 +107,6 @@ class UserData
 end
 
 # Setting version number
-UserData.instance().SetVersionNumber("1.0.0")
+AppVersion.instance().SetVersionNumber("1.0.0")
 
 

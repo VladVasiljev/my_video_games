@@ -65,3 +65,6 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:rating, :comment, :hours_played)
   end
 end
+
+
+
