@@ -20,6 +20,7 @@ class ReviewsController < ApplicationController
 
     if @review.save
       redirect_to @game
+      UserMailer.welcome_email(@user = current_user.email).deliver
     else
       render 'new'
     end
