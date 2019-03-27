@@ -1,9 +1,10 @@
 class UserMailer < ActionMailer::Base
-  default from: "vlad.vasiljevs97@gmail.com"
+  default from: "123hello2020@gmail.com"
 
-  def welcome_email(user)
+  def new_review_added(user,gameName)
     @user = user
-    @url  = "http://myvideogames.herokuapp.com"
-    mail(to: @user, subject: "Welcome to My Awesome Site")
+    @gameName = gameName
+    @url = "http://myvideogames.herokuapp.com"
+    mail(to: @user, subject: "New Review")
   end
 end

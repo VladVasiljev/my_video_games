@@ -91,6 +91,19 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "example.com",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: "123hello2020@gmail.com",
+      password:"dingatding2020",
+      enable_starttls_auto: true
+  }
+
+  config.action_mailer.default_url_options = { :host => ' myvideogames.herokuapp.com' }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

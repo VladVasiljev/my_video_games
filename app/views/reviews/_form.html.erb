@@ -11,17 +11,21 @@
   </div>
 <% end %>
 
-<div class="field">
-  <div id="star-rating"></div>
-</div>
+<!--<div class="field">-->
+<!--  <div id="star-rating"></div>-->
+<!--</div>-->
 
 
 <div class="form">
+
   <%= simple_form_for ([@game, review]) do |f| %>
+    <div id="star-rating">
     <%= f.input :comment, label: 'Review:' %>
     <%= f.input :hours_played, label: 'Hours Played:' %>
     <%= f.button :submit %>
   <% end %>
+
+  </div>
 </div>
 
 <script>
