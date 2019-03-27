@@ -58,6 +58,8 @@ gem 'getGame', '>= 0.0.2', git: "https://b9585f838d658d3595bdf2397f3de3ecbcd46dc
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'rails-observers'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

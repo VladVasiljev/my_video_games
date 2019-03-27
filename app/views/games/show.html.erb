@@ -48,11 +48,13 @@
               <p>Hours Played <%= review.hours_played %> Hours</p>
               <!--              This if statement checks if the review left matches to the user if so show these functions,-->
               <!--              admin has access to edit and delete the reviews-->
-              <% if current_user && current_user == review.user && current_user.admin %>
+              <% if current_user && current_user == review.user || current_user %>
+                <% if current_user.admin || current_user == review.user%>
                 <%= link_to 'Edit', edit_game_review_path(@game.id, review) %> |
                 <%= link_to 'Delete Review', game_review_path(@game.id, review), method: :delete, data: {confirm: 'Are you sure?'} %>
-                </div>
-              <% end %>
+                <% end %>
+                <% end %>
+            </div>
           <% end %>
         <% end %>
       </div>
@@ -62,7 +64,7 @@
   <% if current_user && current_user.admin %>
     <%= link_to 'Edit', edit_game_path(@game) %> |
     <%= link_to 'Delete Game', game_path(@game.id), method: :delete, data: {confirm: 'Are you sure?'} %> |
-    <%= link_to 'Back', game_path %>
+    <%= link_to 'Back', games_path %>
   <% end %>
 </div>
 

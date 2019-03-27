@@ -21,7 +21,7 @@
   <%= simple_form_for ([@game, review]) do |f| %>
     <div id="star-rating">
     <%= f.input :comment, label: 'Review:' %>
-    <%= f.input :hours_played, label: 'Hours Played:' %>
+    <%= f.input :hours_played, label: 'Hours Played:', :input_html => { :type => "number" }%>
     <%= f.button :submit %>
   <% end %>
 
