@@ -18,9 +18,11 @@ class ReviewsController < ApplicationController
     @review.user_id = current_user.id
     @review.game_id = @game.id
 
+
     if @review.save
       redirect_to @game
-      UserMailer.new_review_added(@user = "vlad.vasiljevs97@gmail.com",@gameName = @game.Game_Title ).deliver
+      UserMailer.new_review_added(@user = "vlad.vasiljevs97@gmail.com", @gameName = @game.Game_Title, @commentReview = @review.comment).deliver
+      # UserMailer.new_review_added(@user = "vlad.vasiljevs97@gmail.com", @gameName = @review.comment, @commentReview = @review.comment).deliver
     else
       render 'new'
     end
