@@ -11,7 +11,7 @@
 <% end %>
 
 <div class="form">
-  <%= simple_form_for @game, html: {class: 'form-group'} do |f| %>
+  <%= simple_form_for @game,validate: true, html: {class: 'form-group'} do |f| %>
     <%= f.input :Game_Title, label: 'Game Title:' %>
     <%= f.input :Release_Date, label: 'Release Date:', :order => [:day, :month, :year], :start_year => Time.now.year - 80, wrapper_html: { class: 'form-inline'} %>
     <%= f.input :Publisher, label: 'Publisher:' %>
