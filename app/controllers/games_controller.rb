@@ -76,6 +76,7 @@ class GamesController < ApplicationController
     end
   end
 
+
   # private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -108,5 +109,3 @@ end
 
 # Setting version number
 AppVersion.instance().SetVersionNumber("1.0.0")
-
-

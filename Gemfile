@@ -61,6 +61,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 
+gem 'rails-observers'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

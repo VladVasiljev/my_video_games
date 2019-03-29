@@ -61,6 +61,7 @@
       </div>
     </div>
   </div>
+
   <!--  Checking if the user is admin or not if not then they don't see edit or back -->
   <% if current_user && current_user.admin %>
     <%= link_to 'Edit', edit_game_path(@game) %> |
