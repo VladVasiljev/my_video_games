@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/games/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -79,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/initializers/paperclip.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="82" selection-start-line="1" selection-start-column="82" selection-end-line="1" selection-end-column="82" />
+            <state>
+              <caret column="59" selection-start-column="59" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -440,7 +440,7 @@
       <workItem from="1553253696376" duration="28336000" />
       <workItem from="1553611130372" duration="24780000" />
       <workItem from="1553712421656" duration="32942000" />
-      <workItem from="1553944225275" duration="3776000" />
+      <workItem from="1553944225275" duration="3942000" />
     </task>
     <servers />
   </component>
@@ -450,7 +450,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195284000" />
+    <option name="totallyTimeSpent" value="195450000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -765,13 +765,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/games/show.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="99" column="7" lean-forward="true" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/review_observer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -782,7 +775,14 @@
     <entry file="file://$PROJECT_DIR$/app/views/games/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="99" column="7" lean-forward="true" selection-start-line="99" selection-start-column="7" selection-end-line="99" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -795,8 +795,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/paperclip.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="82" selection-start-line="1" selection-start-column="82" selection-end-line="1" selection-end-column="82" />
+        <state>
+          <caret column="59" selection-start-column="59" selection-end-column="59" />
         </state>
       </provider>
     </entry>
