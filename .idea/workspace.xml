@@ -80,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/config/initializers/paperclip.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="97" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
+              <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -440,7 +440,7 @@
       <workItem from="1553253696376" duration="28336000" />
       <workItem from="1553611130372" duration="24780000" />
       <workItem from="1553712421656" duration="32942000" />
-      <workItem from="1553944225275" duration="3412000" />
+      <workItem from="1553944225275" duration="3610000" />
     </task>
     <servers />
   </component>
@@ -450,7 +450,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194920000" />
+    <option name="totallyTimeSpent" value="195118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -796,7 +796,7 @@
     <entry file="file://$PROJECT_DIR$/config/initializers/paperclip.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="97" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
+          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
         </state>
       </provider>
     </entry>
