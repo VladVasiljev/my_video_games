@@ -96,7 +96,7 @@ Rails.application.configure do
           bucket: 'myvideogames',
           access_key_id: 'AKIAITPGO3YI5FN4AUKA',
           secret_access_key: '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',
-          s3_region: 'EU',
+          s3_region: 'us-east-1',
       }
   }
 
