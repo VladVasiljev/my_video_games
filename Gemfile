@@ -32,7 +32,7 @@ gem 'devise'
 
 #Gem that will allow use to uploaded an image
 # https://github.com/thoughtbot/paperclip
-gem 'paperclip', '~> 4.2.0'
+gem 'paperclip', '~> 5.0'
 
 #Gem that will be used to do styling and structuring
 gem 'bootstrap-sass', '~> 3.4.1'
