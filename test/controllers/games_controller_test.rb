@@ -17,7 +17,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create game" do
     assert_difference('Game.count') do
-      post games_url, params: { game: { Description: @game.Description, Game_Title: @game.Game_Title, Publisher: @game.Publisher, Release_Date: @game.Release_Date } }
+      post games_url, params: { game: { Description: @game.Description, Game_Title: @game.Game_Title, Publisher: @game.Publisher, Release_Date: @game.Release_DateS } }
     end
 
     assert_redirected_to game_url(Game.last)
@@ -46,6 +46,11 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to games_url
   end
 
-  test
-
+  # test "search" do
+  #   if params[:search].present?
+  #     @games = Game.searchkick(params[:search])
+  #   else
+  #     @games = Game.all
+  #   end
+  # end
 end

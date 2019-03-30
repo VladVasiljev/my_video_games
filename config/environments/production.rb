@@ -90,6 +90,16 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  config.paperclip_defaults = {
+      storage: :s3,
+      s3_credentials: {
+          bucket: fetch('myvideogames'),
+          access_key_id: fetch('AKIAITPGO3YI5FN4AUKA'),
+          secret_access_key: fetch('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'),
+          s3_region: fetch('EU'),
+      }
+  }
+
   config.action_mailer.smtp_settings = {
       address: "smtp.gmail.com",
       port: 587,
