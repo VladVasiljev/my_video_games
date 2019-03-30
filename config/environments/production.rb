@@ -93,10 +93,10 @@ Rails.application.configure do
   config.paperclip_defaults = {
       storage: :s3,
       s3_credentials: {
-          bucket: fetch('myvideogames'),
-          access_key_id: fetch('AKIAITPGO3YI5FN4AUKA'),
-          secret_access_key: fetch('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'),
-          s3_region: fetch('EU'),
+          bucket: 'myvideogames',
+          access_key_id: 'AKIAITPGO3YI5FN4AUKA',
+          secret_access_key: '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',
+          s3_region: 'EU',
       }
   }
 
