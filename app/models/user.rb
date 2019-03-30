@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   has_many :games
   has_many :reviews, dependent: :destroy
+  validates :email, uniqueness: true
 
 end
