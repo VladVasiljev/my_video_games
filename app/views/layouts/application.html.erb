@@ -15,8 +15,7 @@
     <%= content_tag(:div, msg, class: "alert alert-info") %>
   <% end %>
   <%= yield %>
-
-  <%= render 'layouts/footer' %>
+  <%= render partial: 'layouts/footer', locals: {start_year: '2018'} %>
 </div>
 </body>
 </html>

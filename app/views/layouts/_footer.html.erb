@@ -17,11 +17,12 @@
     <p>Games : || Last Created : <%= @created %> || Last Updated : <%= @updated %> || Last Deleted : <%= @deleted %></p>
   <% end %>
   <% if current_user && !current_user.admin %>
-    <p>Reviews : || Last Created : <%= @createdReview %> || Last Updated : <%= @updatedReview %> || Last Deleted : <%= @deletedReview %></p>
+    <p>Reviews : || Last Created : <%= @createdReview %> || Last Updated : <%= @updatedReview %> || Last Deleted
+      : <%= @deletedReview %></p>
   <% end %>
   <% if current_user && current_user.admin %>
     <p>Reviews : || Last Updated : <%= @updatedReview %> || Last Deleted : <%= @deletedReview %></p>
   <% end %>
-
-  <%# end %>
+  <p>Copyright <%= "#{start_year} - " if defined? start_year %>
+    <%=Date.today.year %></p>
 </footer>

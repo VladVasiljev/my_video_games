@@ -8,6 +8,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get games_url
     assert_response :success
+    @created = cookies[:created]
   end
 
   test "should get new" do
