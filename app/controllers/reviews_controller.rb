@@ -7,6 +7,12 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
+    @created = cookies[:created]
+    @updated = cookies[:updated]
+    @deleted = cookies[:deleted]
+    @createdReview = cookies[:createdReview]
+    @updatedReview = cookies[:updatedReview]
+    @deletedReview = cookies[:deletedReview]
   end
 
   # GET /reviews/1/edit
@@ -21,8 +27,7 @@ class ReviewsController < ApplicationController
 
     if @review.save
       redirect_to @game
-      # UserMailer.new_review_added(@user = "vlad.vasiljevs97@gmail.com", @gameName = @game.Game_Title, @commentReview = @review.comment).deliver
-      # UserMailer.new_review_added(@user = "vlad.vasiljevs97@gmail.com", @gameName = @review.comment, @commentReview = @review.comment).deliver
+      cookies.permanent[:createdReview] = Time.new.strftime("%Y-%m-%d %H:%M:%S")
     else
       render 'new'
     end
@@ -35,6 +40,7 @@ class ReviewsController < ApplicationController
       if @review.update(review_params)
         format.html {redirect_to @game, notice: 'Review was successfully updated.'}
         format.json {render :show, status: :ok}
+        cookies.permanent[:updatedReview] = Time.new.strftime("%Y-%m-%d %H:%M:%S")
       else
         format.html {render :edit}
         format.json {render json: @review.errors, status: :unprocessable_entity}
@@ -49,6 +55,7 @@ class ReviewsController < ApplicationController
     respond_to do |format|
       format.html {redirect_to @game, notice: 'Your review has been deleted.'}
       format.json {head :no_content}
+      cookies.permanent[:deletedReview] = Time.new.strftime("%Y-%m-%d %H:%M:%S")
     end
   end
 

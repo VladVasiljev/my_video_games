@@ -6,6 +6,13 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @games = Game.all
+    @created = cookies[:created]
+    @updated = cookies[:updated]
+    @deleted = cookies[:deleted]
+    @createdReview = cookies[:createdReview]
+    @updatedReview = cookies[:updatedReview]
+    @deletedReview = cookies[:deletedReview]
+
   end
 
   def search
@@ -19,6 +26,12 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    @created = cookies[:created]
+    @updated = cookies[:updated]
+    @deleted = cookies[:deleted]
+    @createdReview = cookies[:createdReview]
+    @updatedReview = cookies[:updatedReview]
+    @deletedReview = cookies[:deletedReview]
     @reviews = @game.reviews.order("created_at DESC")
     unless @reviews.present?
       @avg_review = 0
@@ -26,6 +39,7 @@ class GamesController < ApplicationController
       @avg_review = @reviews.average(:rating).present? ? @reviews.average(:rating).round(2) : 0
     end
   end
+
 
   # GET /games/new
   def new
@@ -45,6 +59,7 @@ class GamesController < ApplicationController
       if @game.save
         format.html {redirect_to @game, notice: 'Game was successfully added.'}
         format.json {render :show, status: :created, location: @game}
+        cookies.permanent[:created] = Time.new.strftime("%Y-%m-%d %H:%M:%S")
       else
         format.html {render :new}
         format.json {render json: @game.errors, status: :unprocessable_entity}
@@ -59,6 +74,7 @@ class GamesController < ApplicationController
       if @game.update(game_params)
         format.html {redirect_to @game, notice: 'Game was successfully updated.'}
         format.json {render :show, status: :ok, location: @game}
+        cookies.permanent[:updated] = Time.new.strftime("%Y-%m-%d %H:%M:%S")
       else
         format.html {render :edit}
         format.json {render json: @game.errors, status: :unprocessable_entity}
@@ -73,6 +89,7 @@ class GamesController < ApplicationController
     respond_to do |format|
       format.html {redirect_to games_url, notice: 'Game was successfully destroyed.'}
       format.json {head :no_content}
+      cookies.permanent[:deleted] = Time.new.strftime("%Y-%m-%d %H:%M:%S")
     end
   end
 
@@ -85,6 +102,7 @@ class GamesController < ApplicationController
   def game_params
     params.require(:game).permit(:Game_Title, :Release_Date, :Description, :Publisher, :image)
   end
+
 end
 
 

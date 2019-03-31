@@ -67,6 +67,8 @@ gem 'client_side_validations-simple_form'
 
 gem 'rails-observers'
 
+gem 'rss'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

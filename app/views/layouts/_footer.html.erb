@@ -11,6 +11,17 @@
 <footer class="navbar-fixed-bottom">
   <p>Application Created By Vladislavs Vasiljevs <br> 15493322</p>
   <p>
-    <%="Application Version #{AppVersion.instance().GetData()}"%>
+    <%= "Application Version #{AppVersion.instance().GetData()}" %>
   </p>
+  <% if current_user && current_user.admin %>
+    <p>Games : || Last Created : <%= @created %> || Last Updated : <%= @updated %> || Last Deleted : <%= @deleted %></p>
+  <% end %>
+  <% if current_user && !current_user.admin %>
+    <p>Reviews : || Last Created : <%= @createdReview %> || Last Updated : <%= @updatedReview %> || Last Deleted : <%= @deletedReview %></p>
+  <% end %>
+  <% if current_user && current_user.admin %>
+    <p>Reviews : || Last Updated : <%= @updatedReview %> || Last Deleted : <%= @deletedReview %></p>
+  <% end %>
+
+  <%# end %>
 </footer>
