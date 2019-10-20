@@ -1,24 +1,8 @@
-# README
+# My Video Games
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails Project, which allows users to leave reviews and ratings on videos games. Also had the ability to remove/edit their own reviews. Admin had the ability to add new videos games to the list, upload cover pictures etc....
+## Screenshots
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![](https://i.imgur.com/Av5URjp.png)](https://i.imgur.com/Av5URjp.png)
+[![](https://i.imgur.com/sgz55cy.png)](https://i.imgur.com/sgz55cy.png)
+[![](https://i.imgur.com/QsK3mXw.png)](https://i.imgur.com/QsK3mXw.png)
